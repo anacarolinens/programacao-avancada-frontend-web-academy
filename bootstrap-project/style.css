@@ -1,0 +1,97 @@
+/* Geral */
+body {
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.row {
+    margin: 0%;
+
+}
+
+.container-fluid {
+    /*Espaço interno*/
+    padding: 70px;
+
+}
+
+p, li {
+    color: #212121;
+    font-size: 14px;
+
+}
+
+/* Sobre */
+#about-area {
+    background-color: #f2f3f4;
+}
+
+.main-title {
+    text-align: center;
+    margin-bottom: 65px;
+    font-size: 40px;
+    color: #212121;
+}
+
+.main-title::after {
+    content: "";
+    border-top: 2px solid #212121;
+    width: 15%;
+    position: absolute;
+    top: 60px;
+    left: 42.5%;
+}
+
+
+#about-title {
+    color: #212121;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+#about-list {
+    list-style: none;
+    padding: 0;
+}
+
+#about-list i {
+    color: #00447c;
+    margin-right: 15px;
+}
+
+#about-list li {
+    line-height: 30px;
+}
+
+/* Serviços */
+
+.service-box {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.service-box i {
+    font-size: 36px;
+    color: #212121;
+    margin-bottom: 25px;
+}
+
+.service-box h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.service-box:hover > i, .service-box:hover> h3 {
+    color: #0b7b9e;
+
+}
+
+.service-box i {
+    transition: 2s;
+}
+
+.service-box h3 {
+    transition: 2s;
+}
+
