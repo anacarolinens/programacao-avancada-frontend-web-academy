@@ -31,19 +31,20 @@ p, li {
     margin-bottom: 65px;
     font-size: 40px;
     color: #212121;
+    position: relative;
 }
 
 .main-title::after {
     content: "";
     border-top: 2px solid #212121;
     width: 15%;
-    position: absolute;
+    position:absolute;
     top: 60px;
     left: 42.5%;
 }
 
 
-#about-title {
+.title-uppercase{
     color: #212121;
     text-transform: uppercase;
     font-weight: bold;
@@ -94,4 +95,74 @@ p, li {
 .service-box h3 {
     transition: 2s;
 }
+
+/* Parallax */
+
+.parallax {
+    background-image: url("./img/cidadeparallax.png");
+    min-height: 300px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Time */
+
+#team-area {
+    margin-bottom: 35px;
+}
+
+
+/* Trabalhe conosco*/
+
+#apply-area {
+    height: 500px;
+}
+
+#apply-area .row, #apply-image {
+    height: 100%;
+}
+
+#apply-area {
+    margin-bottom: 35px;
+}
+
+#apply-image {
+    background-image: url('./img/empresa.jpg');
+    background-size: cover;
+}
+
+#pattern-paralax h4, #pattern-paralax p {
+    color: #f2f3f4;
+}
+
+#pattern-paralax h4{
+    margin-top: 50px;
+}
+
+#pattern-paralax {
+    padding: 0 5% 0 5%;
+}
+
+
+#pattern-paralax {
+    background-image: url("./img/pattern.png");
+    min-height: 350px;
+    background-attachment: fixed;
+    /* background-position: right; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#apply-btn{
+    background-color: transparent;
+    border-radius: 5px;
+    border-color: #f2f3f4;
+}
+
+#apply-btn:hover{
+    background-color: #0b7b9e;
+}
+
 
