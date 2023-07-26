@@ -1,3 +1,4 @@
+//
 //Progress bar
 let containerA = new ProgressBar.Circle(circleA, {
   color: '#f2f3f4',
@@ -130,3 +131,94 @@ containerD.animate(1.0);
 // Parallax
 // $( "#data-area" ).parallax({imageSrc: 'img/cidadeparallax.png'})
 // $( "#apply-content" ).parallax({imageSrc: 'img/pattern.png'})
+
+
+// Scroll para as seções da página a partir do menu
+let navBtn = $('.nav-item');
+
+let bannerSection = $('#mainSlider');
+let aboutSection = $('#about-area');
+let servicosSection = $('#servicos-area');
+let teamSection = $('#team-area');
+let portfolioSection = $('#portfolio-area');
+let contactSection = $('#contact-area');
+
+let scrollTo = '';
+
+$(navBtn).click(function() {
+
+  let btnId = $(this).attr('id');
+
+  console.log(btnId);
+
+  if(btnId == 'about-menu') {
+      scrollTo = aboutSection;
+  } else if(btnId == 'servicos-menu') {
+      scrollTo = servicosSection;
+  } else if(btnId == 'team-menu') {
+      scrollTo = teamSection;
+  } else if(btnId == 'portfolio-menu') {
+      scrollTo = portfolioSection;
+  } else if(btnId == 'contact-menu') {
+      scrollTo = contactSection;
+  } else {
+      scrollTo = bannerSection;
+  }
+
+  $([document.documentElement, document.body]).animate({
+      scrollTop: $(scrollTo).offset().top-70
+  }, 1500);
+});
+// Filtro para a seção de portfólio
+
+
+ $('.filter-btn').on('click', function() {
+
+  let type = $(this).attr('id');
+  let boxes = $('.project-box');
+
+  $('.main-btn').removeClass('active');
+  $(this).addClass('active');
+
+
+  if(type == 'dsg-btn') {
+      eachBoxes('dsg', boxes)
+  } else if(type == 'dev-btn') {
+      eachBoxes('dev', boxes);
+  } else if(type == 'seo-btn') {
+      eachBoxes('seo', boxes);
+  } else {
+      eachBoxes('all', boxes);
+  }
+});
+
+function eachBoxes(type, boxes) {
+
+  if(type == 'all') {
+      $(boxes).fadeIn(); 
+  } else {
+      $(boxes).each(function() {
+          if(!$(this).hasClass(type)) {
+              $(this).fadeOut('slow');
+          } else {
+              $(this).fadeIn();
+          }
+      });
+  }
+}
+
+// pegue os estados dos botões (qual está selecionado)
+// pegue os cards
+
+// adicione um evento aos botões
+
+// funçao de filtro  
+  // se o filtro não está marcado para "todos"    
+    // para cada card      
+      // se o card não corresponde ao filtro        
+        // esconder o card       
+      // senão, ou seja, se o card corresponde ao filtro         
+        // mostrar o card   
+  // senão, ou seja, se o filtro está em todos    
+    // para cada card      
+      // mostre os elementos cards 
